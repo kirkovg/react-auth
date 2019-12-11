@@ -3,6 +3,10 @@ import * as http from 'http';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import router from './router';
+import mongoose from 'mongoose';
+
+
+mongoose.connect('mongodb://127.0.0.1:27017/auth', {useNewUrlParser: true});
 
 const app = express();
 

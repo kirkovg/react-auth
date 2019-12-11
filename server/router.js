@@ -1,6 +1,5 @@
-export default (app) => {
+import { signup } from './controllers/authentication';
 
-  app.get('/', (req, res, next) => {
-    res.send(['water', 'bottle', 'phone']);
-  });
+export default (app) => {
+  app.post('/signup', signup);
 }
