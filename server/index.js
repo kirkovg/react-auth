@@ -6,7 +6,11 @@ import router from './router';
 import mongoose from 'mongoose';
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/auth', {useNewUrlParser: true});
+mongoose.connect('mongodb://127.0.0.1:27017/auth', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+});
 
 const app = express();
 
